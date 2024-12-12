@@ -1,0 +1,36 @@
+{   
+    "title": "Quizz sur les films Pixar",
+    "quizz": { 
+        "quizz1": {
+            "question": "Quel est le nom du second film d'animation Pixar autour des personnages de Montres & Cie ?", 
+            "choose" : [
+                "A. Monstres Academy",
+                "B. Monstres et Cie 2",
+                "C. Monstres et Cie : Retour à l'université",
+                "D. Monstres et Cie"
+            ], 
+            "answer" : "A. Monstres Academy"
+        },
+        "quizz2": {
+            "question": "Lequel de ces films Pixar est le plus récent ?", 
+            "choose" : [
+                "A. Vice-Versa",
+                "B. Toy Story 4",
+                "C. Luca",
+                "D. Le voyage d'Arlo"
+            ],
+            "answer" : "C. Luca"
+
+        }, 
+        "quizz3": {
+            "question": "Quel est le nom du premier film d'animation Pixar ?", 
+            "choose" : [
+                "A. Toy Story",
+                "B. 1001 Pattes",
+                "C. Monstres et Cie",
+                "D. Le Monde de Nemo"
+            ],
+            "answer" : "A. Toy Story"
+        }
+    }
+}

@@ -1,0 +1,37 @@
+{
+    "title": "Quizz sur les spécialités culinaires françaises",
+    "quizz": { 
+        "quizz1": {
+            "question": "Quel est le nom de ces confiseries typiquement françaises ?", 
+            "choose" : [
+                "A.  Calisson d'Aix",
+                "B. Bêtises de cambrai",
+                "C. Nonettes de Dijon",
+                "D. Bergomotes de Nancy"
+            ], 
+            "answer" : "B. Bêtises de cambrai"
+        },
+        "quizz2": {
+            "question": "Quelle est la spécialité de l'entreprise bretonne nommée Hénaff ?", 
+            "choose" : [
+                "A. La mayonnaise",
+                "B. Le caramel au beurre salé",
+                "C. Les bocaux de légumes",
+                "D. Le pâté"
+            ],
+            "answer" : "D. Le pâté"
+
+        }, 
+        "quizz3": {
+            "question": "De quelle région historique de France le sel de Guérande provient-il ?", 
+            "choose" : [
+                "A. Poitou-Charente",
+                "B. Basse-Normandie",
+                "C. Bretagne",
+                "D. Pays de la Loire"
+            ],
+            "answer" : "D. Pays de la Loire"
+        }
+    }
+
+}

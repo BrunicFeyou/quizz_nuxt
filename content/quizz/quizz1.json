@@ -1,0 +1,36 @@
+{
+    "title": "Quizz sur la définition des mots",
+    "quizz": { 
+        "quizz1": {
+            "question" : "Lequel de ces mots possède un sens contraire à lambiner ?", 
+            "choose" : [
+                "A. S'énerver",
+                "B. Foncer",
+                "C. Applatir",
+                "D. Grandir"
+            ], 
+            "answer" : "B. Foncer"
+        },
+        "quizz2": {
+            "question" : "Lequel de ces mots possède un sens contraire à dispendieux ?", 
+            "choose" : [
+                "A. Économique",
+                "B. Arogant",
+                "C. Sévère",
+                "D. Dépensier"
+            ], 
+            "answer" : "A. Économique"
+        }, 
+        "quizz3": {
+            "question" : "Lequel de ces mots possède un sens contraire à profane ?", 
+            "choose" : [
+            "A. Pudique",
+            "B. Enfantin",
+            "C. Attachant",
+            "D. Initié"
+        ], 
+        "answer" : "D. Initié"
+        }
+    }   
+
+}
