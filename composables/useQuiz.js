@@ -27,10 +27,10 @@ export default function useQuiz(quiz, selectedAnswer) {
             answer,
             isCorrect,
         });
-        if (isCorrect && responseTime <= 10) { // 
+        if (isCorrect && responseTime <= 1) { // 
             score.value+= 5;
 
-        }else if (isCorrect && responseTime > 10) {
+        }else if (isCorrect && responseTime > 1) {
             score.value += 1;
         }
 
