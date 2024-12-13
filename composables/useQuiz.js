@@ -1,30 +1,39 @@
 export default function useQuiz(quiz, selectedAnswer) {
     const indexQuestion = ref(0);
     const score = ref(0);
+    const answer = ref("");
     const userAnswer = reactive([]); 
+    const isQuizFinished = ref(false);
 
-    const VerifiedSelectedAnswer = (selectedAnswer) => {
-        if (selectedAnswer) {
-            selectedAnswer
-        }
+    const resetPage = () => {
+        indexQuestion.value = 0;
+        score.value = 0;
+        userAnswer.splice(0, userAnswer.length);
+        isQuizFinished.value = false;
     }
   
     const nextQuestion = (answer) => {
-        const currentQuestion = quiz[`quizz${indexQuestion.value + 1}`];
-        const isCorrect = currentQuestion.answer === answer;
+        console.log(answer.value, "la réponse sélectionnée ");
+        const currentQuestion = quiz.questions[indexQuestion.value];
+        const isCorrect = currentQuestion.answer === answer.value;
+        console.log(currentQuestion.answer, "la réponse correcte");
+        
 
         userAnswer.push({
             index: indexQuestion.value,
             answer,
             isCorrect,
         });
+        console.log(userAnswer);
         if (isCorrect) {
             score.value++;
         }
-        if (indexQuestion.value < Object.keys(quiz).length - 1) {
+        if (indexQuestion.value < quiz.questions.length - 1) {
             indexQuestion.value++;
+        } else {
+            isQuizFinished.value = true;
         }
-        selectedAnswer.value = "";
+        answer.value = "";
     };
 
     const previousQuestions = () => { 
@@ -35,11 +44,14 @@ export default function useQuiz(quiz, selectedAnswer) {
     };
 
     return {
-        quiz,
+        title: quiz.title,
+        questions: quiz.questions,
         indexQuestion,
         score,
+        answer, 
         userAnswer,
-        VerifiedSelectedAnswer,
+        isQuizFinished,
+        resetPage,
         nextQuestion,
         previousQuestions,
     };
