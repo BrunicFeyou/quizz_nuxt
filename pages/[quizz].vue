@@ -32,7 +32,7 @@ const quiz = useQuiz(data);
                     <div v-if="quiz.isQuizFinished.value" class="text-center">
                         <p class="text-2xl font-bold text-purple-500 mb-4">Quiz Terminé</p>
                         <p class="text-lg">
-                            Score : <span class="font-semibold">{{ quiz.score }}</span> / {{ quiz.questions.length }}
+                            Score : <span class="font-semibold">{{ quiz.score }}</span> 
                         </p>
                         <ul class="mt-6 space-y-3"> 
                             <li v-for="(response, index) in quiz.userAnswer" :key="index" class="p-3 rounded-lg" :class="{
