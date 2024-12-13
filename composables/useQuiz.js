@@ -1,9 +1,7 @@
-export default function useQuiz(quiz) {
+export default function useQuiz(quiz, selectedAnswer) {
     const indexQuestion = ref(0);
     const score = ref(0);
-    const selectedAnswer = ref("");
     const userAnswer = reactive([]); 
-    console.log(selectedAnswer.value, 'selectedAnswer');
 
     const VerifiedSelectedAnswer = (selectedAnswer) => {
         if (selectedAnswer) {
@@ -12,44 +10,37 @@ export default function useQuiz(quiz) {
     }
   
     const nextQuestion = (answer) => {
-   
-      const currentQuestion = quiz[`quizz${indexQuestion.value + 1}`];
-      const isCorrect = currentQuestion.answer === answer;
-  
-      userAnswer.push({
-        index: indexQuestion.value,
-        answer,
-        isCorrect,
-      });
-  
-  
-      if (isCorrect) {
-        score.value++;
-      }
-  
-      if (indexQuestion.value < Object.keys(quiz).length - 1) {
-        indexQuestion.value++;
-      }
-    
-      selectedAnswer.value = "";
+        const currentQuestion = quiz[`quizz${indexQuestion.value + 1}`];
+        const isCorrect = currentQuestion.answer === answer;
+
+        userAnswer.push({
+            index: indexQuestion.value,
+            answer,
+            isCorrect,
+        });
+        if (isCorrect) {
+            score.value++;
+        }
+        if (indexQuestion.value < Object.keys(quiz).length - 1) {
+            indexQuestion.value++;
+        }
+        selectedAnswer.value = "";
     };
-  
+
     const previousQuestions = () => { 
-      if (indexQuestion.value > 0) {
-        indexQuestion.value--;
-      }
-    }; 
+        if (indexQuestion.value > 0) {
+            indexQuestion.value--;
+            userAnswer.splice(indexQuestion.value, 1);
+        }
+    };
 
     return {
-      quiz,
-      indexQuestion,
-      score,
-      selectedAnswer,
-      userAnswer,
-      VerifiedSelectedAnswer,
-      nextQuestion,
-      previousQuestions,
+        quiz,
+        indexQuestion,
+        score,
+        userAnswer,
+        VerifiedSelectedAnswer,
+        nextQuestion,
+        previousQuestions,
     };
-  }
-  
-  
+}
