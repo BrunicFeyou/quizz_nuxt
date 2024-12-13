@@ -7,13 +7,13 @@
                         <NuxtLink to="/" class="text-lg text-gray-700 hover:text-gold transition-all">Home</NuxtLink>
                     </li>
                     <li>
-                        <NuxtLink to="/quiz-1" class="text-lg text-gray-700 hover:text-gold transition-all">Quiz 1</NuxtLink>
+                        <NuxtLink to="/quizz1" class="text-lg text-gray-700 hover:text-gold transition-all">Quiz 1</NuxtLink>
                     </li>
                     <li>
-                        <NuxtLink to="/quiz-2" class="text-lg text-gray-700 hover:text-gold transition-all">Quiz 2</NuxtLink>
+                        <NuxtLink to="/quizz2" class="text-lg text-gray-700 hover:text-gold transition-all">Quiz 2</NuxtLink>
                     </li>
                     <li>
-                        <NuxtLink to="/quiz-3" class="text-lg text-gray-700 hover:text-gold transition-all">Quiz 3</NuxtLink>
+                        <NuxtLink to="/quizz3" class="text-lg text-gray-700 hover:text-gold transition-all">Quiz 3</NuxtLink>
                     </li>
                 </ul>
         </nav>
