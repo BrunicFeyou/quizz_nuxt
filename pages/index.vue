@@ -10,9 +10,6 @@
                 <h1 class="text-4xl font-medium text-center text-gold mb-8">Tester vous !</h1>
                 <div class="flex flex-col gap-8">
                     <QuizListeTitle v-for="task in contentQuery" :key="task._path" :task="task"/>
-                    <div> 
-                        
-                    </div>
                 </div>
             </div>
         </div>

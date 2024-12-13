@@ -1,4 +1,4 @@
-export default function useQuiz(quiz, selectedAnswer) {
+export default function useQuiz(quiz) {
     const indexQuestion = ref(0);
     const score = ref(0);
     const answer = ref("");
@@ -20,14 +20,14 @@ export default function useQuiz(quiz, selectedAnswer) {
         const currentQuestion = quiz.questions[indexQuestion.value];
         const isCorrect = currentQuestion.answer === answer.value;
         // console.log(currentQuestion.answer, "la réponse correcte");
-        var responseTime = (Date.now() - startTimer ) / 1000;  //ici le temps est calculé en secondes
+        var responseTime = (Date.now() - startTimer ) / 1000;  
         console.log(responseTime, "le temps de réponse");  
         userAnswer.push({
             index: indexQuestion.value,
             answer,
             isCorrect,
         });
-        if (isCorrect && responseTime <= 1) { // 
+        if (isCorrect && responseTime <= 1) { 
             score.value+= 5;
 
         }else if (isCorrect && responseTime > 1) {
